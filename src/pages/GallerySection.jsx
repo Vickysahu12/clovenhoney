@@ -6,6 +6,7 @@ import img2 from "../assets/image/bread2.webp";
 import img3 from "../assets/image/bread3.webp";
 import img4 from "../assets/image/bread4.webp";
 import img5 from "../assets/image/bread5.webp"; // big showcase
+import AnimatedSection from "../components/AnimatedSection";
 
 const images = [
   { id: 1, src: img1, alt: "Pastry" },
@@ -40,6 +41,7 @@ const GallerySection = () => {
   }, []);
 
   return (
+    <AnimatedSection>
     <section className="w-full bg-white py-0">
       <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-0">
         {images.map((img) => (
@@ -79,6 +81,7 @@ const GallerySection = () => {
         ))}
       </div>
     </section>
+    </AnimatedSection>
   );
 };
 

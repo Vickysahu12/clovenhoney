@@ -1,4 +1,5 @@
 import React from "react";
+import AnimatedSection from "../components/AnimatedSection";
 
 const menuItems = [
   { name: "AVOCADO TOAST", desc: "Smashed avocado, lemon, chili flakes, spinach, on sourdough toast", price: "8.5" },
@@ -17,6 +18,7 @@ const menuItems = [
 
 const KitchenMenu = () => {
   return (
+    <AnimatedSection>
     <section className="w-full bg-white py-16 px-4 md:px-12 lg:px-20">
       {/* Title */}
       <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
@@ -45,6 +47,7 @@ const KitchenMenu = () => {
         ))}
       </div>
     </section>
+    </AnimatedSection>
   );
 };
 

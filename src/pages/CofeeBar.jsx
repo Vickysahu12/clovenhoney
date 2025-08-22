@@ -1,7 +1,9 @@
 import React from 'react';
+import AnimatedSection from '../components/AnimatedSection';
 
 const CoffeeBar = () => {
   return (
+    <AnimatedSection>
     <div className="bg-white text-[#1a1a1a] font-sans p-8 md:p-16">
       <div className="text-center mb-12 md:mb-20">
         <p className="text-xs font-medium tracking-widest uppercase">LITTE SIPS</p>
@@ -215,6 +217,7 @@ const CoffeeBar = () => {
         </div>
       </div>
     </div>
+    </AnimatedSection>
   );
 };
 

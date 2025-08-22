@@ -1,8 +1,10 @@
 import React from "react";
 import bgImage from "../assets/image/heroo.webp"; // apna bg image dalna
+import AnimatedSection from "../components/AnimatedSection";
 
 const BookATable = () => {
   return (
+    <AnimatedSection>
     <section className="relative mt-20 py-20 px-6 md:px-12 lg:px-20">
       {/* Background Image */}
       <div
@@ -75,6 +77,7 @@ const BookATable = () => {
         </div>
       </div>
     </section>
+    </AnimatedSection>
   );
 };
 

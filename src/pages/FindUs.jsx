@@ -3,10 +3,11 @@ import React from "react";
 // Placeholder image ka use kar rahe hain kyunki local assets yahan kaam nahi karte.
 // Aap apne project mein isse asli image path se badal sakte hain.
 import cafeImage from "../assets/image/vafe4.webp"
+import AnimatedSection from "../components/AnimatedSection";
 
 const FindUs = () => {
   return (
-    // Main section container with white background and responsive padding
+    <AnimatedSection>
     <section className="w-full bg-white font-sans">
       {/* Grid container for the two main columns (image and text) */}
       <div className="grid md:grid-cols-2 grid-cols-1 min-h-[600px]">
@@ -63,6 +64,7 @@ const FindUs = () => {
         </div>
       </div>
     </section>
+    </AnimatedSection>
   );
 };
 

@@ -4,6 +4,7 @@ import kit from "../assets/image/kit1.webp";
 import kite from "../assets/image/kit2.webp";
 import kitee from "../assets/image/kit3.webp";
 import kiteee from "../assets/image/kit4.webp";
+import AnimatedSection from "../components/AnimatedSection";
 
 const images = [
   { id: 1, url: kit },
@@ -41,6 +42,7 @@ const KitchenGallery = () => {
   }, []);
 
   return (
+    <AnimatedSection>
     <div className="w-full font-sans">
       {/* -------- Desktop Layout -------- */}
       <div className="hidden md:grid md:grid-cols-2 w-full">
@@ -123,6 +125,7 @@ const KitchenGallery = () => {
         </div>
       </div>
     </div>
+    </AnimatedSection>
   );
 };
 

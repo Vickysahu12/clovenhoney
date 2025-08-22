@@ -1,7 +1,9 @@
 import React from "react";
+import AnimatedSection from "../components/AnimatedSection";
 
 const Newsletter = () => {
   return (
+    <AnimatedSection>
     <section className="w-full bg-white py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-6">
         {/* Outer Box */}
@@ -34,6 +36,7 @@ const Newsletter = () => {
         </div>
       </div>
     </section>
+    </AnimatedSection>
   );
 };
 

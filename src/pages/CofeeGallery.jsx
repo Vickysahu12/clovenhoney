@@ -4,6 +4,7 @@ import image1 from "../assets/image/cafe1.webp";
 import image2 from "../assets/image/cafe222.webp";
 import image3 from "../assets/image/vafe.webp";
 import image4 from "../assets/image/vafe1.webp";
+import AnimatedSection from "../components/AnimatedSection";
 const images = [
   { id: 1, url: image1 ,alt:"latte"},
   { id: 2, url: image2 , alt:"cappuciano"},
@@ -68,6 +69,7 @@ const CoffeeGallery = () => {
   );
 
   return (
+    <AnimatedSection>
     <section className="w-full font-sans bg-white">
       {/* -------- Desktop Layout -------- */}
       <div className="hidden md:grid md:grid-cols-2 w-full gap-0">
@@ -92,6 +94,7 @@ const CoffeeGallery = () => {
         <GalleryImage src={images[3].url} alt={images[3].alt} id={4} aspect="col-span-2 aspect-square" />
       </div>
     </section>
+    </AnimatedSection>
   );
 };
 

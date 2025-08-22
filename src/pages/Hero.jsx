@@ -1,7 +1,9 @@
 import heroImage from "../assets/image/hero.webp"; // apna image path daalna
+import AnimatedSection from "../components/AnimatedSection";
 
 export default function HeroSection() {
   return (
+    <AnimatedSection>
     <section
       className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${heroImage})` }}
@@ -26,5 +28,6 @@ export default function HeroSection() {
         </p>
       </div>
     </section>
+    </AnimatedSection>
   );
 }

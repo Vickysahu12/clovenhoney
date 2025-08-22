@@ -1,7 +1,9 @@
 import React from "react";
+import AnimatedSection from "../components/AnimatedSection";
 
 export default function AboutUs() {
   return (
+    <AnimatedSection>
     <section className="w-full py-20 bg-white text-center px-6 md:px-20">
       {/* Tagline */}
       <p className="uppercase tracking-widest text-sm text-amber-600 font-semibold">
@@ -25,6 +27,7 @@ export default function AboutUs() {
         we’re here to serve you a café experience that feels like home.
       </p>
     </section>
+    </AnimatedSection>
   );
 }
 
