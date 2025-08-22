@@ -29,7 +29,3 @@ export default function AboutUs() {
 }
 
 
-import image1 from "../assets/image/cafe1.webp";
-import image2 from "../assets/image/cafe2.webp";
-import image3 from "../assets/image/cafe3.webp";
-import image4 from "../assets/image/cafe4.webp";

@@ -1,83 +1,82 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-// apni images import kar
+// Images
 import img1 from "../assets/image/bread1.webp";
 import img2 from "../assets/image/bread2.webp";
 import img3 from "../assets/image/bread3.webp";
 import img4 from "../assets/image/bread4.webp";
-import img5 from "../assets/image/bread5.webp"; // bada image
+import img5 from "../assets/image/bread5.webp"; // big showcase
 
 const images = [
-  { src: img1, alt: "Pastry" },
-  { src: img2, alt: "Bread" },
-  { src: img5, alt: "Big showcase", big: true },
-  { src: img3, alt: "Croissant" },
-  { src: img4, alt: "Churros" },
+  { id: 1, src: img1, alt: "Pastry" },
+  { id: 2, src: img2, alt: "Bread" },
+  { id: 3, src: img5, alt: "Big showcase", big: true },
+  { id: 4, src: img3, alt: "Croissant" },
+  { id: 5, src: img4, alt: "Churros" },
 ];
 
 const GallerySection = () => {
+  const [loadedImages, setLoadedImages] = useState([]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    images.forEach((img) => {
+      const image = new Image();
+      image.src = img.src;
+      image.onload = () => {
+        if (isMounted) {
+          setLoadedImages((prev) => {
+            if (prev.includes(img.id)) return prev;
+            return [...prev, img.id];
+          });
+        }
+      };
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
     <section className="w-full bg-white py-0">
       <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-0">
-        {/* IMG 1 */}
-        <div className="relative overflow-hidden">
-          <img
-            src={img1}
-            alt="Pastry"
-            loading="lazy"
-            decoding="async"
-            fetchPriority="high"
-            className="w-full h-full object-cover transform-gpu will-change-transform transition-transform duration-700 ease-out hover:scale-105"
-          />
-        </div>
+        {images.map((img) => (
+          <div
+            key={img.id}
+            className={`relative group overflow-hidden ${
+              img.big ? "md:row-span-2 md:col-span-1 col-span-2" : ""
+            }`}
+          >
+            {/* Image */}
+            <img
+              src={img.src}
+              alt={img.alt}
+              loading={img.big ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={img.big ? "high" : "auto"}
+              className={`w-full h-full object-cover transform-gpu will-change-transform
+                transition-all duration-700 ease-in-out
+                ${
+                  loadedImages.includes(img.id)
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-105"
+                }
+                group-hover:scale-110 group-hover:brightness-105`}
+            />
 
-        {/* IMG 2 */}
-        <div className="relative overflow-hidden">
-          <img
-            src={img2}
-            alt="Bread"
-            loading="lazy"
-            decoding="async"
-            fetchPriority="high"
-            className="w-full h-full object-cover transform-gpu will-change-transform transition-transform duration-700 ease-out hover:scale-105"
-          />
-        </div>
+            {/* Overlay on hover */}
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-        {/* BIG RIGHT IMAGE */}
-        <div className="relative overflow-hidden md:row-span-2 md:col-span-1 col-span-2">
-          <img
-            src={img5}
-            alt="Big showcase"
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-            className="w-full h-full object-cover transform-gpu will-change-transform transition-transform duration-700 ease-out hover:scale-105"
-          />
-        </div>
-
-        {/* IMG 3 */}
-        <div className="relative overflow-hidden">
-          <img
-            src={img3}
-            alt="Croissant"
-            loading="lazy"
-            decoding="async"
-            fetchPriority="high"
-            className="w-full h-full object-cover transform-gpu will-change-transform transition-transform duration-700 ease-out hover:scale-105"
-          />
-        </div>
-
-        {/* IMG 4 */}
-        <div className="relative overflow-hidden">
-          <img
-            src={img4}
-            alt="Churros"
-            loading="lazy"
-            decoding="async"
-            fetchPriority="high"
-            className="w-full h-full object-cover transform-gpu will-change-transform transition-transform duration-700 ease-out hover:scale-105"
-          />
-        </div>
+            {/* Hover text */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="text-white text-lg md:text-xl font-semibold opacity-0 group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-500">
+                {img.alt}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

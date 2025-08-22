@@ -5,7 +5,7 @@ const CoffeeBar = () => {
     <div className="bg-white text-[#1a1a1a] font-sans p-8 md:p-16">
       <div className="text-center mb-12 md:mb-20">
         <p className="text-xs font-medium tracking-widest uppercase">LITTE SIPS</p>
-        <h1 className="text-4xl md:text-5xl font-bold mt-2">Coffee Bar</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mt-2">𝙲𝚘𝚏𝚏𝚎𝚎 𝙱𝚊𝚛</h1>
       </div>
 
       <div className="flex flex-col md:flex-row md:space-x-12">

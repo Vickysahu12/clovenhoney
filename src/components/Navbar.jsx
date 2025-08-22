@@ -1,18 +1,20 @@
 import { useState } from "react";
 import { Menu, X, Search } from "lucide-react"; // icons
 import logo from "../assets/image/loog.webp";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // updated routes
   const leftLinks = [
-    { name: "𝙼𝚎𝚗𝚞 ", href: "#" },
-    { name: "𝙶𝚊𝚕𝚕𝚎𝚛𝚢 ", href: "#" },
+    { name: "𝙼𝚎𝚗𝚞 ", href: "/Menu" },
+    { name: "𝙶𝚊𝚕𝚕𝚎𝚛𝚢 ", href: "/Gallery" },
   ];
 
   const rightLinks = [
-    { name: "𝙲𝚘𝚗𝚝𝚊𝚌𝚝", href: "#" },
-    { name: "𝙱𝚘𝚘𝚔 𝚊 𝚃𝚊𝚋𝚕𝚎", href: "#" },
+    { name: "𝙲𝚘𝚗𝚝𝚊𝚌𝚝", href: "/Contact" },
+    { name: "𝙱𝚘𝚘𝚔 𝚊 𝚃𝚊𝚋𝚕𝚎", href: "/Boooking" },
   ];
 
   return (
@@ -24,36 +26,38 @@ export default function Navbar() {
           {/* Left Links */}
           <div className="flex gap-8">
             {leftLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="text-black font-medium hover:text-black transition-colors duration-300"
+                to={link.href}
+                className="text-black font-medium hover:text-[#d4b06c] transition-colors duration-300"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Logo Center */}
           <div className="flex justify-center">
-            <img
-              src={logo}
-              alt="Logo"
-              className="h-16 w-auto transition-all duration-300"
-              loading="eager"
-            />
+            <Link to="/">
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-16 w-auto transition-all duration-300"
+                loading="eager"
+              />
+            </Link>
           </div>
 
           {/* Right Links */}
           <div className="flex gap-8">
             {rightLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="text-gray-800 font-medium hover:text-black transition-colors duration-300"
+                to={link.href}
+                className="text-gray-800 font-medium hover:text-[#d4b06c] transition-colors duration-300"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -69,12 +73,14 @@ export default function Navbar() {
           </button>
 
           {/* Logo Center */}
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-16 w-auto transition-all duration-300"
-            loading="eager"
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-16 w-auto transition-all duration-300"
+              loading="eager"
+            />
+          </Link>
 
           {/* Search Icon Right */}
           <button className="p-2 text-gray-800">
@@ -99,14 +105,14 @@ export default function Navbar() {
         {/* Sidebar Links */}
         <div className="flex flex-col items-start gap-6 p-6">
           {[...leftLinks, ...rightLinks].map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
-              className="text-lg font-medium text-white hover:text-black transition-colors duration-300"
+              to={link.href}
+              className="text-lg font-medium text-white hover:text-[#d4b06c] transition-colors duration-300"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
