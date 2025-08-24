@@ -42,45 +42,45 @@ const GallerySection = () => {
 
   return (
     <AnimatedSection>
-    <section className="w-full bg-white py-0">
-      <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-0">
-        {images.map((img) => (
-          <div
-            key={img.id}
-            className={`relative group overflow-hidden ${
-              img.big ? "md:row-span-2 md:col-span-1 col-span-2" : ""
-            }`}
-          >
-            {/* Image */}
-            <img
-              src={img.src}
-              alt={img.alt}
-              loading={img.big ? "eager" : "lazy"}
-              decoding="async"
-              fetchPriority={img.big ? "high" : "auto"}
-              className={`w-full h-full object-cover transform-gpu will-change-transform
-                transition-all duration-700 ease-in-out
-                ${
-                  loadedImages.includes(img.id)
-                    ? "opacity-100 scale-100"
-                    : "opacity-0 scale-105"
-                }
-                group-hover:scale-110 group-hover:brightness-105`}
-            />
+      <section className="w-full bg-white py-0">
+        <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-0">
+          {images.map((img) => (
+            <div
+              key={img.id}
+              className={`relative group overflow-hidden ${
+                img.big ? "md:row-span-2 md:col-span-1 col-span-2" : ""
+              }`}
+            >
+              {/* Image */}
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading={img.big ? "eager" : "lazy"}
+                decoding="async"
+                fetchPriority={img.big ? "high" : "auto"}
+                className={`w-full h-full object-cover transform-gpu will-change-transform
+                  transition-all duration-700 ease-in-out
+                  ${
+                    loadedImages.includes(img.id)
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-105"
+                  }
+                  group-hover:scale-110 group-hover:brightness-105 rounded`}
+              />
 
-            {/* Overlay on hover */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Overlay on hover (green accent) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-emerald-700/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            {/* Hover text */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-white text-lg md:text-xl font-semibold opacity-0 group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-500">
-                {img.alt}
-              </p>
+              {/* Hover text */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <p className="text-emerald-200 text-lg md:text-xl font-semibold drop-shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-500">
+                  {img.alt}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
     </AnimatedSection>
   );
 };

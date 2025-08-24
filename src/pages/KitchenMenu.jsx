@@ -19,34 +19,40 @@ const menuItems = [
 const KitchenMenu = () => {
   return (
     <AnimatedSection>
-    <section className="w-full bg-white py-16 px-4 md:px-12 lg:px-20">
-      {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-        𝙺𝚒𝚝𝚌𝚑𝚎𝚗
-      </h2>
+      <section className="w-full bg-white py-16 px-4 md:px-12 lg:px-20">
+        {/* Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            𝙺𝚒𝚝𝚌𝚑𝚎𝚗
+          </h2>
+          <div className="w-16 h-1 bg-emerald-600 mx-auto mt-4 rounded"></div>
+        </div>
 
-      {/* Menu Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 max-w-7xl mx-auto">
-        {menuItems.map((item, index) => (
-          <div key={index} className="flex justify-between items-start">
-            {/* Left Side (Name + Desc) */}
-            <div className="pr-6">
-              <h3 className="text-sm md:text-base font-bold text-gray-900 uppercase tracking-wide">
-                {item.name}
-              </h3>
-              <p className="text-sm text-gray-600 leading-snug mt-1">
-                {item.desc}
-              </p>
+        {/* Menu Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 max-w-7xl mx-auto">
+          {menuItems.map((item, index) => (
+            <div
+              key={index}
+              className="flex justify-between items-start border-b border-gray-100 pb-4 hover:border-emerald-200 transition-colors"
+            >
+              {/* Left Side (Name + Desc) */}
+              <div className="pr-6">
+                <h3 className="text-sm md:text-base font-bold text-gray-900 uppercase tracking-wide hover:text-emerald-700 transition-colors">
+                  {item.name}
+                </h3>
+                <p className="text-sm text-gray-600 leading-snug mt-1">
+                  {item.desc}
+                </p>
+              </div>
+
+              {/* Right Side (Price) */}
+              <span className="text-emerald-700 font-semibold text-sm md:text-base whitespace-nowrap transition-all duration-300 group-hover:text-emerald-900">
+                ${item.price}
+              </span>
             </div>
-
-            {/* Right Side (Price) */}
-            <span className="text-gray-700 font-medium text-sm md:text-base whitespace-nowrap">
-              {item.price}
-            </span>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
     </AnimatedSection>
   );
 };

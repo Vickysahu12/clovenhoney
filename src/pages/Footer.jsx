@@ -21,17 +21,17 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3 text-sm">
                 <li>
-                  <a href="#" className="hover:text-[#b4937a] transition-colors">
+                  <a href="#" className="hover:text-green-600 transition-colors">
                     Our Story
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#b4937a] transition-colors">
+                  <a href="#" className="hover:text-green-600 transition-colors">
                     FAQ
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#b4937a] transition-colors">
+                  <a href="#" className="hover:text-green-600 transition-colors">
                     Careers
                   </a>
                 </li>
@@ -58,19 +58,19 @@ const Footer = () => {
               <div className="flex justify-center md:justify-start gap-6 text-xl">
                 <a
                   href="#"
-                  className="hover:text-[#b4937a] transition-all transform hover:scale-110"
+                  className="hover:text-green-600 transition-all transform hover:scale-110"
                 >
                   <FaInstagram />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-[#b4937a] transition-all transform hover:scale-110"
+                  className="hover:text-green-600 transition-all transform hover:scale-110"
                 >
                   <FaFacebookF />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-[#b4937a] transition-all transform hover:scale-110"
+                  className="hover:text-green-600 transition-all transform hover:scale-110"
                 >
                   <FaXTwitter />
                 </a>
@@ -79,12 +79,12 @@ const Footer = () => {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-white/20 mt-12 mb-6"></div>
+          <div className="border-t border-green-200 mt-12 mb-6"></div>
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center text-xs text-black gap-4">
             <p>© 2025 𝙲𝚕𝚘𝚟𝚎𝙽'𝙷𝚘𝚗𝚎𝚢. All Rights Reserved.</p>
-            <p className="uppercase tracking-[2px] text-[#000">
+            <p className="uppercase tracking-[2px] text-green-700 font-semibold">
               Made with ❤️ for coffee lovers
             </p>
           </div>
