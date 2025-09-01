@@ -13,7 +13,7 @@ export default function HeroSection() {
 
         {/* Vertical Text (Left side) */}
         <div className="absolute left-4 top-1/2 -translate-y-1/2 rotate-180 origin-center">
-          <p className="text-emerald-400 text-sm tracking-[0.3em] whitespace-nowrap [writing-mode:vertical-lr] font-semibold drop-shadow">
+          <p className="text-blue-800 text-sm tracking-[0.3em] whitespace-nowrap [writing-mode:vertical-lr] font-semibold drop-shadow">
             BECAUSE WE LOVE COFFEE
           </p>
         </div>
@@ -22,7 +22,7 @@ export default function HeroSection() {
         <div className="relative text-center px-4">
           <h1 className="text-4xl md:text-6xl font-extrabold mt-30 text-white drop-shadow-2xl leading-tight">
             Incredible food <br />
-            <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               heavenly coffee
             </span>
           </h1>

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6"; 
-import cafeLogo from "../assets/image/loog.webp"; 
+import cafeLogo from "../assets/image/caaaf.webp"; 
 import AnimatedSection from "../components/AnimatedSection";
 
 const Footer = () => {
@@ -83,7 +83,7 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center text-xs text-black gap-4">
-            <p>© 2025 𝙲𝚕𝚘𝚟𝚎𝙽'𝙷𝚘𝚗𝚎𝚢. All Rights Reserved.</p>
+            <p>© 2025 𝙲𝙰𝙵𝙴 𝚂𝙰𝙿𝙾𝚁𝙴. All Rights Reserved.</p>
             <p className="uppercase tracking-[2px] text-green-700 font-semibold">
               Made with ❤️ for coffee lovers
             </p>

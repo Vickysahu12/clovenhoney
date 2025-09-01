@@ -20,7 +20,7 @@ export default function AboutUs() {
 
         {/* Content */}
         <p className="max-w-3xl mx-auto text-gray-700 leading-relaxed text-lg">
-          At <span className="font-semibold text-emerald-700">𝙲𝚕𝚘𝚟𝚎𝙽'𝙷𝚘𝚗𝚎𝚢</span>, every cup of coffee and every dish is crafted 
+          At <span className="font-semibold text-emerald-700">𝙲𝙰𝙵𝙴 𝚂𝙰𝙿𝙾𝚁𝙴</span>, every cup of coffee and every dish is crafted 
           with love, passion, and care. Our mission is to bring people together over 
           exceptional coffee and delicious food, creating a cozy space where conversations 
           flow as smoothly as our brews.  

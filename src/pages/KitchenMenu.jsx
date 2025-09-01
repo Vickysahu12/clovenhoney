@@ -37,7 +37,7 @@ const KitchenMenu = () => {
             >
               {/* Left Side (Name + Desc) */}
               <div className="pr-6">
-                <h3 className="text-sm md:text-base font-bold text-gray-900 uppercase tracking-wide hover:text-emerald-700 transition-colors">
+                <h3 className="text-sm md:text-base font-bold text-gray-900 uppercase tracking-wide hover:text-blue-700 transition-colors">
                   {item.name}
                 </h3>
                 <p className="text-sm text-gray-600 leading-snug mt-1">

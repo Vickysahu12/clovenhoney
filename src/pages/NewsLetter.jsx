@@ -28,7 +28,7 @@ const Newsletter = () => {
               />
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-3 bg-green-600 text-white text-sm font-semibold uppercase tracking-wide hover:bg-green-700 transition rounded"
+                className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white text-sm font-semibold uppercase tracking-wide hover:bg-green-700 transition rounded"
               >
                 Sign Up
               </button>

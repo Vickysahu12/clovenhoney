@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Search } from "lucide-react"; // icons
-import logo from "../assets/image/loog.webp";
+import logo from "../assets/image/caaaf.webp";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
